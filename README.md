@@ -71,3 +71,47 @@ This project is an implementation of a Retrieval-Augmented Generation (RAG) syst
     ```python
     from query_pipeline import run_query_pipeline
     run_query_pipeline(query
+
+
+    internal-document-rag-system/
+├── data_ingestion_pipeline.py
+├── query_pipeline.py
+├── requirements.txt
+├── README.md
+└── earnings_pdfs/ # Your PDF documents go here
+
+
+
+
+## Example Usage
+
+1. **Data Ingestion:**
+
+    ```python
+    from data_ingestion_pipeline import run_data_ingestion_pipeline
+
+    # Set up the folder path and run data ingestion
+    folder_path = "earnings_pdfs"
+    run_data_ingestion_pipeline(folder_path)
+    ```
+
+2. **Querying:**
+
+    ```python
+    from query_pipeline import run_query_pipeline
+
+    query = "give me a breakdown of revenues from each quarter from 2021 that is available and please put it into tables for me"
+    response = run_query_pipeline(query)
+    print("LLM Response:")
+    print(response)
+    ```
+
+## Requirements
+
+### requirements.txt
+
+```text
+openai
+numpy
+pymupdf
+pymilvus
