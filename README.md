@@ -11,7 +11,7 @@ This project is an implementation of a Retrieval-Augmented Generation (RAG) syst
 - **Chunking Method:** Semantic Chunking by paragraph/section/table
 - **Distance Metric:** Euclidean Distance (L2)
 - **Index Type:** IVF_FLAT
-- **Metadata Filters:** Company name, Document type, Date
+- **Metadata Filters:** Company name, Document type, Date (TODO)
 
 ## Setup Instructions
 
