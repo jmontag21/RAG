@@ -53,53 +53,13 @@ This project is an implementation of a Retrieval-Augmented Generation (RAG) syst
 
     Set the `folder_path` variable to the directory containing your PDF documents.
 
-### Running the System
-
-1. **Data Ingestion Pipeline:**
-
-    The data ingestion pipeline processes PDF documents, extracts text using GPT-4o Vision, performs semantic chunking, generates embeddings, and stores them in ZillizDB.
-
-    ```python
-    from data_ingestion_pipeline import run_data_ingestion_pipeline
-    run_data_ingestion_pipeline()
-    ```
-
-2. **Query Pipeline:**
-
-    The query pipeline processes user queries, retrieves relevant information from ZillizDB, and returns an enhanced prompt with contextual information.
-
-    ```python
-    from query_pipeline import run_query_pipeline
-    run_query_pipeline(query
-
-
-    internal-document-rag-system/
-├── data_ingestion_pipeline.py
-├── query_pipeline.py
-├── requirements.txt
-├── README.md
-└── earnings_pdfs/ # Your PDF documents go here
-
-
 
 
 ## Example Usage
 
-1. **Data Ingestion:**
+1. **Querying:**
 
     ```python
-    from data_ingestion_pipeline import run_data_ingestion_pipeline
-
-    # Set up the folder path and run data ingestion
-    folder_path = "earnings_pdfs"
-    run_data_ingestion_pipeline(folder_path)
-    ```
-
-2. **Querying:**
-
-    ```python
-    from query_pipeline import run_query_pipeline
-
     query = "give me a breakdown of revenues from each quarter from 2021 that is available and please put it into tables for me"
     response = run_query_pipeline(query)
     print("LLM Response:")
